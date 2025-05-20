@@ -6,5 +6,5 @@ do
 	xsetroot -name "$(acpi | sed -e  "s/Battery 0: //" | sed -e "s/, [0-9]*:[0-9]*:[0-9]* //" | sed -e "s/remaining//" | sed -e "s/until charged//" | sed -e "s/Discharging, //")"
 	sleep 20s
 done &
-
-exec dwm
+dwm &
+exec volumeicon
