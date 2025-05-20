@@ -1,2 +1,3 @@
 - copy config.fish here and then to lenovo
 - update dell's .xinitrc with this one
+- update dell's nvim
