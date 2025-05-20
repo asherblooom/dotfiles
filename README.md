@@ -9,3 +9,5 @@
   - [pure](https://github.com/pure-fish/pure/)
 - redshift
 - acpi
+- xsetroot
+- volumeicon
