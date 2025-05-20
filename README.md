@@ -7,7 +7,8 @@
   - [fisher](https://github.com/jorgebucaran/fisher)
   - [sponge](https://github.com/meaningful-ooo/sponge)
   - [pure](https://github.com/pure-fish/pure/)
-- redshift
-- acpi
-- xsetroot
-- volumeicon
+- for .xinitrc:
+  - redshift
+  - acpi
+  - xsetroot
+  - volumeicon
