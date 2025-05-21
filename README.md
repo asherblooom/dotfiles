@@ -3,6 +3,7 @@
 - fish terminal
 - gohufont 14 nerd font
 - fira code nerd font
+- btop
 - fish extensions:
   - [fisher](https://github.com/jorgebucaran/fisher)
   - [sponge](https://github.com/meaningful-ooo/sponge)
