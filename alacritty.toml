@@ -1,0 +1,13 @@
+[font]
+normal = {family = "Cozette", style="Regular"}
+italic = {family = "Cozette", style="Regular"}
+bold = {family = "Cozette", style="Regular"}
+bold_italic = {family = "Cozette", style="Regular"}
+size = 10
+offset = { x = 1, y = 2}
+
+[mouse]
+hide_when_typing = true
+
+[terminal]
+shell = "/bin/fish"
