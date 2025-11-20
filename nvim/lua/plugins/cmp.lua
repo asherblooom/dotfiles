@@ -22,7 +22,7 @@ return {
       local cmp = require("cmp")
       local defaults = require("cmp.config.default")()
       local context = require("cmp.config.context")
-      local auto_select = false
+      local auto_select = true
       return {
         auto_brackets = {}, -- configure any filetype to auto add brackets
         completion = {
@@ -32,9 +32,9 @@ return {
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-          ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+          ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+          ["<tab>"] = cmp.mapping.complete(), -- (restarts the mapping (and so also updates it))
           ["<CR>"] = LazyVim.cmp.confirm({ select = auto_select }),
           ["<C-y>"] = LazyVim.cmp.confirm({ select = true }),
           ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
@@ -42,9 +42,9 @@ return {
             cmp.abort()
             fallback()
           end,
-          ["<tab>"] = function(fallback)
-            return LazyVim.cmp.map({ "snippet_forward", "ai_accept" }, fallback)()
-          end,
+          -- ["<tab>"] = function(fallback)
+          --   return LazyVim.cmp.map({ "snippet_forward", "ai_accept" }, fallback)()
+          -- end,
         }),
         enabled = function()
           return not context.in_treesitter_capture("comment")

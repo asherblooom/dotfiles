@@ -29,7 +29,6 @@ return {
           ["@comment"] = { fg = "grey" },
         },
       })
-      require("bamboo").load()
     end,
   },
 
@@ -37,7 +36,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "bamboo",
+      colorscheme = "kanagawa",
     },
   },
 }
