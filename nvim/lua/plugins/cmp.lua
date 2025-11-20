@@ -34,9 +34,10 @@ return {
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
           ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
           ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-          ["<tab>"] = cmp.mapping.complete(), -- (restarts the mapping (and so also updates it))
+          ["<C-Space>"] = cmp.mapping.complete(), -- (restarts the mapping (and so also updates it))
           ["<CR>"] = LazyVim.cmp.confirm({ select = auto_select }),
           ["<C-y>"] = LazyVim.cmp.confirm({ select = true }),
+          -- these are overriden by the CR mapping above
           ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
           ["<C-CR>"] = function(fallback)
             cmp.abort()
